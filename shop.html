@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women's Shopping</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+}
+
+/* Header */
+header{
+    background:#ff4d88;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(to right,#ff99bb,#ffd6e7);
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+    color:#333;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ff4d88;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.hero button:hover{
+    background:#e6005c;
+}
+
+/* Categories */
+.categories{
+    padding:40px;
+    text-align:center;
+}
+
+.categories h2{
+    margin-bottom:25px;
+}
+
+.category-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    width:180px;
+    border-radius:10px;
+    box-shadow:0 0 10px lightgray;
+}
+
+.box:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
+
+/* Products */
+.products{
+    padding:40px;
+    text-align:center;
+}
+
+.product-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px lightgray;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px;
+}
+
+.card p{
+    color:#555;
+}
+
+.card button{
+    margin:15px;
+    padding:10px 20px;
+    background:#ff4d88;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* About */
+.about{
+    background:white;
+    padding:50px;
+    text-align:center;
+}
+
+/* Contact */
+.contact{
+    padding:50px;
+    text-align:center;
+}
+
+input, textarea{
+    width:80%;
+    max-width:500px;
+    padding:10px;
+    margin:10px;
+}
+
+.contact button{
+    padding:10px 25px;
+    background:#ff4d88;
+    color:white;
+    border:none;
+}
+
+/* Footer */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🌸 Women's Shopping</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Categories</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<h2>Fashion That Makes You Shine ✨</h2>
+<p>Crafted with Passion. Designed for You.</p>
+<button>Shop Now</button>
+</section>
+
+<section class="categories">
+<h2>Shop by Category</h2>
+
+<div class="category-box">
+
+<div class="box">
+<h3>👗 Dresses</h3>
+</div>
+
+<div class="box">
+<h3>👜 Handbags</h3>
+</div>
+
+<div class="box">
+<h3>👠 Footwear</h3>
+</div>
+
+<div class="box">
+<h3>💍 Jewelry</h3>
+</div>
+
+</div>
+</section>
+
+<section class="products">
+
+<h2>Featured Products</h2>
+
+<div class="product-list">
+
+<div class="card">
+<img src="https://via.placeholder.com/250x250" alt="Dress">
+<h3>Floral Dress</h3>
+<p>$30</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x250" alt="Bag">
+<h3>Stylish Handbag</h3>
+<p>$25</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x250" alt="Shoes">
+<h3>High Heels</h3>
+<p>$40</p>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+<h2>About Us</h2>
+<p>
+We provide high-quality women's fashion products at affordable prices.
+Our goal is to make every woman feel confident and stylish.
+</p>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+
+<input type="text" placeholder="Your Name"><br>
+
+<input type="email" placeholder="Your Email"><br>
+
+<textarea rows="5" placeholder="Your Message"></textarea><br>
+
+<button>Send Message</button>
+
+</section>
+
+<footer>
+<p>© 2026 Women's Shopping | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
