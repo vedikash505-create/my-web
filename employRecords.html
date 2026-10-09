@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        /* CSS Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Error message styling */
+        .error {
+            color: #d9534f;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Success message styling */
+        #successMessage {
+            text-align: center;
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Employee Registration</h2>
+        <form id="registrationForm">
+            
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter email">
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password (min 6 chars)">
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter 10-digit phone number">
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <!-- Department -->
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="HR">Human Resources (HR)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+                <span class="error" id="departmentError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+            <div id="successMessage"></div>
+
+        </form>
+    </div>
+
+    <script>
+        // JavaScript Validation Logic
+        const form = document.getElementById('registrationForm');
+
+        form.addEventListener('submit', function(event) {
+            // Prevent form from submitting by default
+            event.preventDefault();
+
+            // Get input values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const department = document.getElementById('department').value;
+
+            // Get error span elements
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const phoneError = document.getElementById('phoneError');
+            const departmentError = document.getElementById('departmentError');
+            const successMessage = document.getElementById('successMessage');
+
+            // Reset error messages and success message before validation
+            nameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            phoneError.textContent = '';
+            departmentError.textContent = '';
+            successMessage.textContent = '';
+
+            let isValid = true;
+
+            // 1. Name Validation
+            if (name === '') {
+                nameError.textContent = 'Name is required.';
+                isValid = false;
+            }
+
+            // 2. Email Validation (Basic regex for email format)
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email === '') {
+                emailError.textContent = 'Email is required.';
+                isValid = false;
+            } else if (!email.match(emailPattern)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // 3. Password Validation (At least 6 characters)
+            if (password === '') {
+                passwordError.textContent = 'Password is required.';
+                isValid = false;
+            } else if (password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // 4. Phone Number Validation (Must be 10 digits)
+            const phonePattern = /^\d{10}$/;
+            if (phone === '') {
+                phoneError.textContent = 'Phone number is required.';
+                isValid = false;
+            } else if (!phone.match(phonePattern)) {
+                phoneError.textContent = 'Phone number must be exactly 10 digits.';
+                isValid = false;
+            }
+
+            // 5. Department Validation
+            if (department === '') {
+                departmentError.textContent = 'Please select a department.';
+                isValid = false;
+            }
+
+            // If all fields are valid
+            if (isValid) {
+                successMessage.textContent = 'Employee registered successfully!';
+                form.reset(); // Clear the form
+            }
+        });
+    </script>
+
+</body>
+</html>
