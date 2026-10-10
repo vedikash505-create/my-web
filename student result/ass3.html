@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>🎓 Student Result Management System</h1>
+        <p>Manage Student Marks, Results and Performance</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Enter Student Details</h2>
+
+            <form id="resultForm">
+                <div class="form-group">
+                    <label for="roll">Roll Number</label>
+                    <input type="text" id="roll"
+                           placeholder="Enter roll number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter student name" required>
+                </div>
+
+                <div class="marks-grid">
+                    <div class="form-group">
+                        <label for="maths">Maths ( /100)</label>
+                        <input type="number" id="maths"
+                               min="0" max="100" step="any" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="science">Science ( /100)</label>
+                        <input type="number" id="science"
+                               min="0" max="100" step="any" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="english">English ( /100)</label>
+                        <input type="number" id="english"
+                               min="0" max="100" step="any" required>
+                    </div>
+                </div>
+
+                <button type="submit">Add Student Result</button>
+            </form>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Students</h3>
+                <p id="studentCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Class Average</h3>
+                <p id="classAverage">0%</p>
+            </div>
+
+            <div class="summary-card topper-card">
+                <h3>🏆 Class Topper</h3>
+                <p id="topper">Not available</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Student Result Records</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Maths</th>
+                            <th>Science</th>
+                            <th>English</th>
+                            <th>Total / 300</th>
+                            <th>Percentage</th>
+                            <th>Result</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultTable">
+                        <tr id="emptyRow">
+                            <td colspan="9">No student records added yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Student Result Management System</p>
+    </footer>
+
+</body>
+</html>

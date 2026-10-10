@@ -1,291 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Women's Shopping</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Shopping</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body{
-    background:#f8f8f8;
-}
+        body {
+            background: #f8f8f8;
+        }
 
-/* Header */
-header{
-    background:#ff4d88;
-    color:white;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+        /* Header */
+        header {
+            background: #ff4d88;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header h1{
-    font-size:28px;
-}
+        header h1 {
+            font-size: 28px;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
 
-nav a:hover{
-    text-decoration:underline;
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-/* Hero Section */
-.hero{
-    background:linear-gradient(to right,#ff99bb,#ffd6e7);
-    text-align:center;
-    padding:80px 20px;
-}
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #ff99bb, #ffd6e7);
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-.hero h2{
-    font-size:40px;
-    color:#333;
-}
+        .hero h2 {
+            font-size: 40px;
+            color: #333;
+        }
 
-.hero p{
-    margin-top:10px;
-    font-size:20px;
-}
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
 
-.hero button{
-    margin-top:20px;
-    padding:12px 25px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:18px;
-}
+        /* Shop Now Link/Button */
+        .hero .shop-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
 
-.hero button:hover{
-    background:#e6005c;
-}
+        .hero .shop-btn:hover {
+            background: #e6005c;
+        }
 
-/* Categories */
-.categories{
-    padding:40px;
-    text-align:center;
-}
+        /* Categories */
+        .categories {
+            padding: 40px;
+            text-align: center;
+        }
 
-.categories h2{
-    margin-bottom:25px;
-}
+        .categories h2 {
+            margin-bottom: 25px;
+        }
 
-.category-box{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        .category-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.box{
-    background:white;
-    padding:20px;
-    width:180px;
-    border-radius:10px;
-    box-shadow:0 0 10px lightgray;
-}
+        .box {
+            background: white;
+            padding: 20px;
+            width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px lightgray;
+        }
 
-.box:hover{
-    transform:scale(1.05);
-    transition:0.3s;
-}
+        .box:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
 
-/* Products */
-.products{
-    padding:40px;
-    text-align:center;
-}
+        /* Products */
+        .products {
+            padding: 40px;
+            text-align: center;
+        }
 
-.product-list{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.card{
-    background:white;
-    width:250px;
-    border-radius:10px;
-    box-shadow:0 0 10px lightgray;
-    overflow:hidden;
-}
+        .card {
+            background: white;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px lightgray;
+            overflow: hidden;
+        }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-.card h3{
-    margin:10px;
-}
+        .card h3 {
+            margin: 10px;
+        }
 
-.card p{
-    color:#555;
-}
+        .card p {
+            color: #555;
+        }
 
-.card button{
-    margin:15px;
-    padding:10px 20px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
+        .card button {
+            margin: 15px;
+            padding: 10px 20px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-/* About */
-.about{
-    background:white;
-    padding:50px;
-    text-align:center;
-}
+        .card button:hover {
+            background: #e6005c;
+        }
 
-/* Contact */
-.contact{
-    padding:50px;
-    text-align:center;
-}
+        /* About */
+        .about {
+            background: white;
+            padding: 50px;
+            text-align: center;
+        }
 
-input, textarea{
-    width:80%;
-    max-width:500px;
-    padding:10px;
-    margin:10px;
-}
+        .about p {
+            margin-top: 15px;
+        }
 
-.contact button{
-    padding:10px 25px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-}
+        /* Contact */
+        .contact {
+            padding: 50px;
+            text-align: center;
+        }
 
-/* Footer */
-footer{
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-</style>
+        input,
+        textarea {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            margin: 10px;
+        }
 
+        .contact button {
+            padding: 10px 25px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #e6005c;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-<h1>🌸 Women's Shopping</h1>
+    <!-- Header -->
+    <header>
+        <h1>🌸 Women's Shopping</h1>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Categories</a>
-<a href="#">Products</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-</header>
 
-<section class="hero">
-<h2>Fashion That Makes You Shine ✨</h2>
-<p>Crafted with Passion. Designed for You.</p>
-<button>Shop Now</button>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
 
-<section class="categories">
-<h2>Shop by Category</h2>
+        <h2>Fashion That Makes You Shine ✨</h2>
 
-<div class="category-box">
+        <p>Crafted with Passion. Designed for You.</p>
 
-<div class="box">
-<h3>👗 Dresses</h3>
-</div>
+        <!-- Shop Now opens Myntra in a new tab -->
+        <a href="https://www.myntra.com/?utm_source=dms_google&utm_medium=dms_searchbrand_cpc&utm_campaign=dms_google_searchbrand_cpc_Search_Brand_Myntra_Brand_India_BM_TROAS_SOK_New&gad_source=1&gad_campaignid=20443628324&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k6CUlkl3v4CJm22UIBc7H_gjFD-N7fILHgaXDSRCjoNacZ6pKEesTRoClkkQAvD_BwE"
+            class="shop-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            Shop Now
+        </a>
 
-<div class="box">
-<h3>👜 Handbags</h3>
-</div>
+    </section>
 
-<div class="box">
-<h3>👠 Footwear</h3>
-</div>
 
-<div class="box">
-<h3>💍 Jewelry</h3>
-</div>
+    <!-- Categories Section -->
+    <section class="categories">
 
-</div>
-</section>
+        <h2>Shop by Category</h2>
 
-<section class="products">
+        <div class="category-box">
 
-<h2>Featured Products</h2>
+            <div class="box">
+                <h3>👗 Dresses</h3>
+            </div>
 
-<div class="product-list">
+            <div class="box">
+                <h3>👜 Handbags</h3>
+            </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/250x250" alt="Dress">
-<h3>Floral Dress</h3>
-<p>$30</p>
-<button>Buy Now</button>
-</div>
+            <div class="box">
+                <h3>👠 Footwear</h3>
+            </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/250x250" alt="Bag">
-<h3>Stylish Handbag</h3>
-<p>$25</p>
-<button>Buy Now</button>
-</div>
+            <div class="box">
+                <h3>💍 Jewelry</h3>
+            </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/250x250" alt="Shoes">
-<h3>High Heels</h3>
-<p>$40</p>
-<button>Buy Now</button>
-</div>
+        </div>
 
-</div>
+    </section>
 
-</section>
 
-<section class="about">
-<h2>About Us</h2>
-<p>
-We provide high-quality women's fashion products at affordable prices.
-Our goal is to make every woman feel confident and stylish.
-</p>
-</section>
+    <!-- Products Section -->
+    <section class="products">
 
-<section class="contact">
-<h2>Contact Us</h2>
+        <h2>Featured Products</h2>
 
-<input type="text" placeholder="Your Name"><br>
+    <div class="product-list">
 
-<input type="email" placeholder="Your Email"><br>
+    <!-- Floral Dress -->
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500"
+            alt="Floral Dress">
+        <h3>Floral Dress</h3>
+        <p>$30</p>
+        <button>Buy Now</button>
+    </div>
 
-<textarea rows="5" placeholder="Your Message"></textarea><br>
+    <!-- Stylish Handbag -->
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+            alt="Stylish Handbag">
+        <h3>Stylish Handbag</h3>
+        <p>$25</p>
+        <button>Buy Now</button>
+    </div>
 
-<button>Send Message</button>
+    <!-- High Heels -->
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500"
+            alt="High Heels">
+        <h3>High Heels</h3>
+        <p>$40</p>
+        <button>Buy Now</button>
+    </div>
 
-</section>
+    </div>
 
-<footer>
-<p>© 2026 Women's Shopping | All Rights Reserved</p>
-</footer>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We provide high-quality women's fashion products at affordable prices.
+            Our goal is to make every woman feel confident and stylish.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact">
+
+        <h2>Contact Us</h2>
+
+        <input type="text" placeholder="Your Name">
+        <br>
+
+        <input type="email" placeholder="Your Email">
+        <br>
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <br>
+
+        <button>Send Message</button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Women's Shopping | All Rights Reserved</p>
+    </footer>
 
 </body>
+
 </html>
